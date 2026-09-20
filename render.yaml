@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: huffman-lab-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --chdir backend app:app
+    healthCheckPath: /api/health

@@ -1,7 +1,8 @@
 /* Huffman Lab - frontend logic (plain JavaScript, no dependencies). */
 "use strict";
 
-const API_BASE = location.protocol === "file:" ? "http://127.0.0.1:5000" : "";
+const API_BASE = window.HUFFMAN_API_URL ||
+  (location.protocol === "file:" ? "http://127.0.0.1:5000" : "");
 
 /* ====================================================================
    Helpers
